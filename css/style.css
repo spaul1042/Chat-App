@@ -1,0 +1,89 @@
+.logo {
+  /* to centre */
+  display: block;
+  margin: auto;
+
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  background-color: aqua;
+}
+.container{
+ 
+  max-width: 955px;
+  background-color: lightblue;
+  margin: auto;
+  margin-top:30px;
+  height: 60vh;
+  border : 2px solid black;
+  border-radius: 10px;;
+
+}
+
+.message {
+  background-color: gray;
+  width: 24%;
+  padding: 10px;
+  margin: 17px 12px;
+  border: 2px solid darkorchid;
+  border-radius: 10px;
+}
+.message2{
+  background-color: lightgreen;
+  width: 30%;
+  height: auto;
+  padding: 2px;
+  margin:auto;
+  text-align: center;
+  margin-top :10px;
+  border: 2px solid darkorchid;
+  border-radius: 8px;
+}
+.left {
+  float: left;
+  clear: both;
+}
+.right {
+  float: right;
+  clear: both;
+}
+.middle{
+  display: block;
+  clear:both;
+  /* margin: auto; */
+}
+
+.send{
+    margin:10px;
+}
+
+#send-container{
+
+    display : block;
+    margin:auto;
+    
+    /* to center elements */
+    text-align : center;
+    max-width:1000px;
+    width:100%;
+
+}
+
+#messageInput
+{
+    margin-left:10px;
+    width: 90%;
+    border: 2px solid red;
+    border-radius: 10px;
+    height:34px;
+}
+
+.btn
+{
+    cursor:pointer;
+    border:2px solid black;
+    border-radius: 10px;
+    height: 34px;
+}
