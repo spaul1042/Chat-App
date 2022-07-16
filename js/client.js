@@ -7,6 +7,7 @@ const socket = io("http://localhost:8000");
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("messageInput");
 const messageContainer = document.querySelector(".container");
+const audio = new Audio("ting.mp3");
 
 // append function to be called when user-joined event is listened
 const append2 = (message, position) => {
@@ -21,6 +22,9 @@ const append2 = (message, position) => {
   }
 
   messageContainer.append(newMessage);
+  if (position == "left") {
+    audio.play();
+  }
 };
 
 // User Joins -> socket emits 'new-user-joined' event from client -> socket listens 'new-user-joined' event on server and broadcast emits 'user-joined' event
@@ -29,7 +33,6 @@ let new_name = prompt("Enter your name to join");
 socket.emit("new-user-joined", new_name);
 
 socket.on("user-joined", (name) => {
-
   append2(`${name} joined the chat!!`, "middle");
 });
 
